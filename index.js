@@ -45,10 +45,6 @@ function colorPalette(){
       color.style.backgroundColor = styleColor;
       palette.appendChild(color);
     }
-
-    // return palette;
-    // color.appendChild(colors)
-    // color.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 }
 colorPalette();
 
