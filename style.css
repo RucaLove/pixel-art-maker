@@ -12,6 +12,13 @@ h1 {
   color: SlateGray;
 }
 
+h2 {
+  text-align: left;
+  text-indent: 15px;
+  font-size: 25px;
+  margin-top: 0px;
+}
+
 .grid {
   align-content: center;
   height: 500px;
@@ -72,4 +79,14 @@ h1 {
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
   margin: 2px;
+}
+
+.brushColor {
+  border: 3px solid #999999;
+  background-color: white;
+  height: 25px;
+  margin: 6px 0 0 12px;
+  width: 100px;
+  float: right;
+  margin-right: 20px;
 }

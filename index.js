@@ -46,8 +46,26 @@ function colorPalette(){
     let randomColor = color[j];
       randomColor = 'rgb(' + (Math.floor(Math.random()*256)) + ', ' +  (Math.floor(Math.random()*256)) + ', ' + (Math.floor(Math.random()*256)) + ')';
       color.style.backgroundColor = randomColor
+
+        palette.addEventListener('click', function(event) {
+          if (event.target.className !== 'color') {
+            return;
+          }
+
+          brush = event.target.style.background;
+          brushColor.style.background = brush;
+        });
+
       }
     }
+    var heading = document.createElement('h2');
+    heading.textContent = 'CURRENT BRUSH COLOR >';
+    palette.appendChild(heading);
+
+    var brushColor = document.createElement('div');
+    brushColor.className = 'brushColor';
+    heading.appendChild(brushColor);
+
 }
 colorPalette();
 
