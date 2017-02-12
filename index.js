@@ -47,14 +47,13 @@ function colorPalette(){
       randomColor = 'rgb(' + (Math.floor(Math.random()*256)) + ', ' +  (Math.floor(Math.random()*256)) + ', ' + (Math.floor(Math.random()*256)) + ')';
       color.style.backgroundColor = randomColor
 
-        palette.addEventListener('click', function(event) {
-          if (event.target.className !== 'color') {
-            return;
-          }
-
-          brush = event.target.style.background;
-          brushColor.style.background = brush;
-        });
+        // palette.addEventListener('click', function(event) {
+        //   if (event.target.className !== 'color[j]') {
+        //     return;
+        //   } else {
+        //    event.target.style.backgroundColor = brushColor.style.backgroundColor;
+        //      }
+        // });
 
       }
     }
@@ -65,6 +64,13 @@ function colorPalette(){
     var brushColor = document.createElement('div');
     brushColor.className = 'brushColor';
     heading.appendChild(brushColor);
+
+    heading.addEventListener('click', function(event) {
+      if (event.target.className !== 'color[j]') {}
+       else {
+       event.target.style.backgroundColor = color[j];
+         }
+    });
 
 }
 colorPalette();
@@ -85,7 +91,3 @@ gridMama.addEventListener('click', function(){
     event.target.style.backgroundColor = colorSave.style.backgroundColor;
   }
 });
-
-// currentColor.addEventListener(, function(){
-//
-// })
