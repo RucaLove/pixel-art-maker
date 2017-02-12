@@ -40,10 +40,15 @@ function colorPalette(){
         palette.appendChild(color);
         color.className = 'color';
 
-      var colors = ['Red', 'DarkOliveGreen', 'DarkBlue', 'Orange', 'Yellow', 'violet', 'CadetBlue','Crimson', 'WhiteSmoke', 'Coral', 'DarkGray', 'DodgerBlue', 'Lime', 'Purple', 'Black'];
-      var styleColor = colors[j];
-      color.style.backgroundColor = styleColor;
-      palette.appendChild(color);
+    for (var i = 0; i < 100; i++) {
+    let colors = document.createElement('div');
+    color.appendChild(colors);
+    colors.className = 'colors';
+    // colors.id='colors'+i
+    let randomColor = color[j];
+    randomColor = 'rgb(' + (Math.floor(Math.random()*256)) + ', ' +  (Math.floor(Math.random()*256)) + ', ' + (Math.floor(Math.random()*256)) + ')';
+    color.style.backgroundColor = randomColor
+}
     }
 }
 colorPalette();
