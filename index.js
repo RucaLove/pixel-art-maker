@@ -5,6 +5,8 @@ gridMama.className = 'gridMama';
 var newPalette = document.createElement('div');
 body.appendChild(newPalette);
 newPalette.className = 'newPalette';
+var currentColor = document.createElement('div');
+newPalette.appendChild(currentColor);
 
 function gridLayout(){
   var grid = document.createElement('div');
@@ -31,7 +33,7 @@ function colorPalette(){
   newPalette.appendChild(palette);
   palette.className = 'palette';
 
-    for (var j = 0; j < 30; j++) {
+    for (var j = 0; j < 25; j++) {
       var color = document.createElement('div');
       palette.appendChild(color);
       color.className = 'color';
@@ -53,15 +55,19 @@ var colorSave = document.createElement('div');
 colorSave.style.backgroundColor = '';
 
 newPalette.addEventListener('click', function(){
-  if (event.target === this) {}
+  if (event.target === this || event.target === 'body' || event.target === 'gridMama' || event.target === 'grid') {}
   else {
     colorSave.style.backgroundColor = event.target.style.backgroundColor;
   }
 });
 
 gridMama.addEventListener('click', function(){
-  if (event.target === this) {}
+  if (event.target === this || event.target === 'body' || event.target === 'grid') {}
   else {
     event.target.style.backgroundColor = colorSave.style.backgroundColor;
   }
 });
+
+// currentColor.addEventListener(, function(){
+//
+// })
