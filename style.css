@@ -18,7 +18,7 @@ h2 {
   font-size: 19px;
   margin-top: 0px;
   color: SlateGray;
-  font-style: italic;;
+  font-style: italic;
   font-family: 'Rock Salt', cursive;
 }
 
@@ -86,7 +86,7 @@ h2 {
 
 .brushColor {
   border: 3px solid #999999;
-  background-color: white;
+  /*background-color: white;*/
   height: 25px;
   margin: 6px 0 0 12px;
   width: 100px;

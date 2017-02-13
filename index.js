@@ -45,7 +45,7 @@ function colorPalette(){
 
     let randomColor = color[j];
       randomColor = 'rgb(' + (Math.floor(Math.random()*256)) + ', ' +  (Math.floor(Math.random()*256)) + ', ' + (Math.floor(Math.random()*256)) + ')';
-      color.style.backgroundColor = randomColor
+      color.style.backgroundColor = randomColor;
 
         // palette.addEventListener('click', function(event) {
         //   if (event.target.className !== 'color[j]') {
@@ -65,13 +65,12 @@ function colorPalette(){
     brushColor.className = 'brushColor';
     heading.appendChild(brushColor);
 
-    heading.addEventListener('click', function(event) {
-      if (event.target.className !== 'color[j]') {}
-       else {
-       event.target.style.backgroundColor = color[j];
-         }
+    newPalette.addEventListener('click', function(){
+      if (event.target === this || event.target === 'body' || event.target === 'gridMama' || event.target === 'grid') {}
+      else {
+        brushColor.style.backgroundColor = event.target.style.backgroundColor;
+      }
     });
-
 }
 colorPalette();
 
@@ -91,3 +90,7 @@ gridMama.addEventListener('click', function(){
     event.target.style.backgroundColor = colorSave.style.backgroundColor;
   }
 });
+
+// brushColor.addEventListener('click', function() {
+//   brushColor.style.backgroundColor = colorSave.target.style.backgroundColor;
+// })
